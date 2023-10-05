@@ -46,7 +46,7 @@ button {
 }
 
 section {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .container {
@@ -65,6 +65,9 @@ section {
 }
 
 @media screen and (min-width: 1158px) {
+  section {
+    padding: 120px 0;
+  }
   .container {
     max-width: 1158px;
   }
@@ -260,7 +263,7 @@ section {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 188px 0;
+  padding: 72px 0;
   max-width: 320px;
   margin: auto;
 }
@@ -286,6 +289,7 @@ section {
       ),
       url(../images/hero/hero-bg-image_tab.jpg);
     max-width: 768px;
+    padding: 112px 0;
   }
 }
 
@@ -310,6 +314,7 @@ section {
       ),
       url(../images/hero/hero-bg-image_desk.jpg);
     max-width: 1440px;
+    padding: 188px 0;
   }
 }
 
@@ -326,12 +331,29 @@ section {
 
 .hero-header {
   color: var(--WHITE, #fff);
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
   text-align: center;
-  margin: 0 auto 48px;
-  max-width: 496px;
+  font-size: 36px;
+  line-height: 1.11;
+  margin: 0 auto 72px;
+  max-width: 200px;
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-header {
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    margin: 0 auto 36px;
+    max-width: 496px;
+    text-transform: none;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero-header {
+    margin: 0 auto 48px;
+  }
 }
 
 .hero-button,
@@ -381,16 +403,77 @@ section {
   |=======================
 */
 
+/* Mobile */
 .advantages-list {
-  gap: 24px;
-}
-
-.advantages-card {
-  display: flex;
   flex-direction: column;
-  width: calc((100% - 72px) / 4);
+  row-gap: 72px;
+  column-gap: 24px;
 }
 
+.advantages-card-header {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.advantages-card-paragraph {
+  color: var(--SLATE, #434455);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  .advantages-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .advantages-card {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% - 24px) / 2);
+  }
+
+  .advantages-card-header {
+    text-align: left;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1158px) {
+  .advantages-card {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% - 72px) / 4);
+  }
+
+  .advantages-card-header {
+    color: #2e2f42;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+  }
+
+  .advantages-card-paragraph {
+    color: var(--SLATE, #434455);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Advantages icon divs - displayed only for desktop */
 .advantages-icons-cards {
   display: flex;
   align-items: center;
@@ -403,26 +486,10 @@ section {
   margin-bottom: 8px;
 }
 
-@media only screen and (max-width: 1157px) {
+@media only screen and (max-width: 1157.98px) {
   .advantages-icons-cards {
     display: none;
   }
-}
-
-.advantages-card-header {
-  color: #2e2f42;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  margin-bottom: 8px;
-}
-
-.advantages-card-paragraph {
-  color: var(--SLATE, #434455);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 
 /* 
@@ -445,12 +512,12 @@ section {
   margin-bottom: 72px;
 }
 
+/* Mobile */
 .team-list {
-  display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  row-gap: 72px;
 }
 
 .team-card {
@@ -458,14 +525,28 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  width: calc((100% - 72px) / 4);
-
   border-radius: 0px 0px 4px 4px;
   background: var(--WHITE, #fff);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  .team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 64px;
+    column-gap: 24px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1158px) {
+  .team-card {
+    width: calc((100% - 72px) / 4);
+  }
 }
 
 .team-card-content {
@@ -556,7 +637,6 @@ section {
   background: var(--WHITE, #fff);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .portfolio-card:hover,
 .portfolio-card:focus {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
