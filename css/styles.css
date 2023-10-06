@@ -53,7 +53,7 @@ section {
   max-width: 320px;
   padding: 0 15px;
   margin: 0 auto;
-  /* to see container boundaries, delete later ----------------------------*/
+  /* to see container boundaries, delete later */
   /* outline: 2px solid red; */
   outline-offset: -2px;
 }
@@ -80,8 +80,8 @@ section {
 */
 
 .hamburger-button {
-  min-height: 24;
-  min-width: 24;
+  min-height: 24px;
+  min-width: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,7 +171,6 @@ section {
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .menu-link:hover,
 .menu-link:focus {
   color: var(--OCEAN, #404bbf);
@@ -195,7 +194,6 @@ section {
   align-items: center;
   margin-left: auto;
 }
-
 @media only screen and (max-width: 767.98px) {
   .menu-links-list,
   .contact-info {
@@ -207,7 +205,6 @@ section {
   font-style: normal;
   gap: 40px;
 }
-
 @media only screen and (max-width: 1157.98px) {
   .contact-info-list {
     flex-direction: column;
@@ -230,7 +227,6 @@ section {
   padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .contact-link:hover,
 .contact-link:focus {
   color: var(--OCEAN, #404bbf);
@@ -473,7 +469,6 @@ section {
   }
 }
 
-/* Advantages icon divs - displayed only for desktop */
 .advantages-icons-cards {
   display: flex;
   align-items: center;
@@ -635,9 +630,6 @@ section {
   flex-direction: column;
   background: var(--WHITE, #fff);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  border: -1px solid var(--CLOUD, #f4f4fd);
-  background: var(--WHITE, #fff);
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
@@ -1227,33 +1219,6 @@ section {
     display: none;
   }
 }
-
-/* .modal-close-button-group {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  background-color: rgba(231, 233, 252, 1);
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: none;
-  outline: none;
-  margin: auto;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-close-button-group:hover,
-.modal-close-button-group:focus {
-  background-color: #404bbf;
-  border: none;
-} */
 
 .mobile-menu-list {
   display: block;
